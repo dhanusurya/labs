@@ -56,6 +56,9 @@ Docker Networking:
 	docker run -d --net none --name cont2 alpine      # attach a container to none network
 	docker run -d --net ravinet --name cont3 alpine   # attache a container to custom bridge/overlay network
 
+---------------------------------------------------------------------------------------------------------
+        docker run -d --net <network-name> --name <container-name> image-name 
+
 Docker Swarm
 
 	docker swarm init   ## initialize the swarm mode (swarm manager)
