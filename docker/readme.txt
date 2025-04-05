@@ -35,11 +35,18 @@ Docker Volumes
 
 Docker COMPOSE:
 
+
+
   case 1: deploy multiple containers from a single image
              docker-compose -f docker-compose.yml up --scale web=4 -d  ; docker-compose down
   case 2: deploy multiple containers from multiple images
              docker-compose -f docker-compose.yml -p webapps up -d --scale web=2 --scale app=2
-
+------------------------------------------------------------------------------------------------------
+  use case :   docker-compose [GLOBAL OPTIONS] COMMAND [COMMAND OPTIONS]
+               docker-compose -f <compose-file> -p <project-name> up --scale <service>=<count> -d
+here, -f and -p are global options, then command ( up / down ) , scale options, -d 
+modified by Dhanu
+-----------------------------------------------------------------------------------------------------
 
 Docker Networking:
 	docker network ls   # list the default & custom networks on a docker host
